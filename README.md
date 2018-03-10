@@ -64,7 +64,8 @@ valid. On failure status code 401 (unauthorized) is returned.
     Return a protected <resource>, listed above. This request is authenticated using token-based authentication only. HTTP password-based (basic) authentication is not allowed. On success, the requested resource is returned. On failure status code 401 (unauthorized) is returned.
 
 **IMPORTANT** The Server gets the token from the `token` HTTP header.  
-/api/register expects a form via POST with fields 'username' and 'password'.
+/api/register expects a form via POST with fields 'username' and 'password'.  
+The default token duration is 30 seconds. 
 
 /api/register/page is an html page to easily register a new user.  
 /api/token/page is intended for debugging and only sends username/password as args, rather than through basic auth.

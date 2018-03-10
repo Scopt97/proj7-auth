@@ -215,7 +215,7 @@ def verify_password(username, password):
         return False
 
 
-def generate_auth_token(user_id, expiration=60):
+def generate_auth_token(user_id, expiration=30):
     s = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
     # pass index of user
     token = s.dumps({'id': user_id})
